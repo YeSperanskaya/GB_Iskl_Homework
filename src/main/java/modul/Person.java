@@ -6,15 +6,15 @@ public class Person {
     private String patronymic;
     private String dateOfBirth;
     private int phone_number;
-    private char sex;
+    private char gender;
 
-    public Person(String surname, String name, String patronymic, String dateOfBirth, int phone_number, char sex) {
+    public Person(String surname, String name, String patronymic, String dateOfBirth, int phone_number, char gender) {
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
         this.dateOfBirth = dateOfBirth;
         this.phone_number = phone_number;
-        this.sex = sex;
+        this.gender = gender;
     }
 
     public String getSurname() {
@@ -37,7 +37,7 @@ public class Person {
         return phone_number;
     }
 
-    public char getSex() {
-        return sex;
+    public char getGender() {
+        return gender;
     }
 }
