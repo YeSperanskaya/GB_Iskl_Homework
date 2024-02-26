@@ -11,6 +11,15 @@ public class Person {
     public Person() {
     }
 
+    /**
+     * а его я буду создавать через массив стрингов, который внутри буду преобразовывать!
+     * @param surname
+     * @param name
+     * @param patronymic
+     * @param dateOfBirth
+     * @param phone_number
+     * @param gender
+     */
     public Person(String surname, String name, String patronymic, String dateOfBirth, int phone_number, char gender) {
         this.surname = surname;
         this.name = name;

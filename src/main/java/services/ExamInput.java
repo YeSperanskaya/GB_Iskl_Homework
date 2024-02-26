@@ -9,13 +9,18 @@ public class ExamInput {
      */
     public ExamInput(String[] array){
         boolean size = isSizeArray(array);
-        boolean surname = isCurectlyName(array[0]);
-        boolean name = isCurectlyName(array[1]);
-        boolean patronymic = isCurectlyName(array[2]);
-//        boolean bul3 = isCurectlyName(array[0]);
+        if (!size) {
+            this.result = false;
+        } else {
+            boolean surname = isCurectlyName(array[0]);
+            boolean name = isCurectlyName(array[1]);
+            boolean patronymic = isCurectlyName(array[2]);
+            boolean dateOfBirth = isCurectlyDateOfBirth(array[3]);
 //        boolean bul4 = isCurectlyName(array[0]);
 //        boolean bul5 = isCurectlyName(array[0]);
-        this.result = size && surname && name && patronymic;
+            this.result = size && surname && name && patronymic && dateOfBirth;
+        }
+
 
     }
 
@@ -25,6 +30,10 @@ public class ExamInput {
 
     }
 
+    private boolean isCurectlyDateOfBirth(String str) {
+        ExaminationDateOfBirth examinationDateOfBirth = new ExaminationDateOfBirth();
+        return examinationDateOfBirth.examen(str);
+    }
 
 
     private boolean isSizeArray(String[] array) {

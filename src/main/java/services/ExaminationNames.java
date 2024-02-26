@@ -2,7 +2,11 @@ package services;
 
 public class ExaminationNames implements Examination {
 
-
+    /**
+     * не хватает првоерки на верные символы
+     * @param str
+     * @return
+     */
     @Override
     public boolean examen(String str) {
         try {
@@ -19,18 +23,8 @@ public class ExaminationNames implements Examination {
         }
     }
 
-
 }
 
 
 
 
-class MyStringSizeException extends RuntimeException {
-    public MyStringSizeException() {
-        super();
-    }
-
-    public MyStringSizeException(int i) {
-        super("В строке должно быть количество элементов от 2 до 15, у вас " + i);
-    }
-}
