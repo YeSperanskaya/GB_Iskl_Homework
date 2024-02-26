@@ -8,6 +8,9 @@ public class Person {
     private int phone_number;
     private char gender;
 
+    public Person() {
+    }
+
     public Person(String surname, String name, String patronymic, String dateOfBirth, int phone_number, char gender) {
         this.surname = surname;
         this.name = name;
@@ -40,4 +43,6 @@ public class Person {
     public char getGender() {
         return gender;
     }
+
+
 }

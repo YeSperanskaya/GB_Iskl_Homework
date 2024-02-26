@@ -19,7 +19,7 @@ public class ViewInput {
         viewInfo();
         Scanner sc = new Scanner(System.in);
         this.str = sc.nextLine();
-        sc.close();
+
     }
 
     public String getStr() {
